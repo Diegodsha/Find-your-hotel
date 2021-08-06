@@ -5,7 +5,8 @@ const { hotels } = hotelsEndpoint;
 
 const getHotels = async () => {
   const res = await axios.get(`${BASE_URL}${hotels}`);
-  console.log(res);
+  //   console.log(res.data);
+  return res.data;
 };
 
 export default getHotels;

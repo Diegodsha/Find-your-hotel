@@ -1,4 +1,4 @@
-const FETCH_HOTELS = 'FETCH_BOOKS';
+const FETCH_HOTELS = 'FETCH_HOTELS';
 
 const types = {
   fetchHotels: FETCH_HOTELS,
