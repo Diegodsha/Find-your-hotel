@@ -1,70 +1,93 @@
-# Getting Started with Create React App
+# Find your hotel
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+>Front end of Find your hotel app using React.
 
-## Available Scripts
+<p align="center">
+  <a href="https://github.com/Diegodsha/Find-your-hotel/issues">
+  <img src="https://img.shields.io/github/issues-raw/Diegodsha/Find-your-hotel?style=for-the-badge"
+       alt="Issues"></a>
+   <a href="https://github.com/Diegodsha/Find-your-hotel/pulls">
+  <img src="https://img.shields.io/github/issues-pr/Diegodsha/Find-your-hotel?style=for-the-badge"
+       alt="Pull Requests"></a>
+   <a href="https://github.com/Diegodsha/Find-your-hotel/blob/develop/LICENSE">
+  <img src="https://img.shields.io/github/license/Diegodsha/Find-your-hotel?style=for-the-badge"
+       alt="License"></a>
+</p>
 
-In the project directory, you can run:
+## Sneak peak
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Built With
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- Node.js
+- React
+- React-DOM
+- React-Create-App
+- Redux
+- npm
+- CSS
+- ES6
+- Jest
+- Heroku
 
-### `npm test`
+### Description
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+    Front end of Find your hotel app using React.
 
-### `npm run build`
+## Live Demo
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Visit [Find_your_hotel](https://Find-your-hotel-r.herokuapp.com/)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Prerequisites
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+  - Internet Connection
+  - Web Browser
+  - Code Editor 
+  - Node Package Manager (NPM)
 
-### `npm run eject`
+## Getting Started
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- Open your terminal 
+  - Windows: `Win + R`, then type `cmd` | Mac: `Command + space`, then type `Terminal`| Linux: `Ctrl + Alt`
+- Navigate to a directory of your choosing using the `cd` command (e.g: cd my-directory/)
+- Run this command in your OS terminal: `git clone https://github.com/Diegodsha/Find-your-hotel.git` to get a copy of the project.
+- Navigate to the project's directory using the `cd` command
+- Run `npm i` to install all dependencies
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Usage
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- From within the project directory run `npm start` to start a local server in your web browser.
+- Available Paths:
+ - Visit `http://localhost:3000/` for Home view
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
+### Testing (React-JEST)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Thanks to React integrated testing library users can simply run `npm test` from within the project's folder to execute all the tests.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+## Author
+<div align="center">
+<img src="https://user-images.githubusercontent.com/70416006/121233844-aff9e800-c858-11eb-99e4-d36b833d3fa9.png">
+</div>
+<div align="center">
+<img src="https://user-images.githubusercontent.com/70416006/121235243-42e75200-c85a-11eb-967d-ea05dd5efe1f.png">
+</div>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+👤 &nbsp; **Diego Hernández**
+- Portfolio: [Portfolio](https://dshagui.com/)
+- LinkedIn: [diegoshdezaguilar](https://www.linkedin.com/in/diegoshdezaguilar/)
+- GitHub: [@Diegodsha](https://github.com/Diegodsha)
+- Twitter: [@diegohdezchimo](https://twitter.com/diegohdezchimo)
 
-### Analyzing the Bundle Size
+## Show your support
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Give a ⭐️ if you like this project!
 
-### Making a Progressive Web App
+## Acknowledgments
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Microverse
 
-### Advanced Configuration
+## License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project is [MIT](https://github.com/Diegodsha/Find-your-hotel/blob/develop/LICENSE) licensed
