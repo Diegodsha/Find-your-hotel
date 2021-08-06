@@ -35,8 +35,9 @@
     Front end of Find your hotel app using React.
 
 ## Live Demo
+[![Netlify Status](https://api.netlify.com/api/v1/badges/10bda418-7bb0-489c-a8db-c48c61f0242d/deploy-status)](https://app.netlify.com/sites/find-your-hotel/deploys)
 
-Visit [Find_your_hotel](https://Find-your-hotel-r.herokuapp.com/)
+Visit [Find_your_hotel](https://find-your-hotel.netlify.app/)
 
 ## Prerequisites
 
