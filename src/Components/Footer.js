@@ -1,16 +1,24 @@
+import {
+  TiSocialFacebook,
+  TiSocialInstagram,
+  TiSocialTwitter,
+} from 'react-icons/ti';
+import StyledFooter from '../Assets/StyledFooter';
+import { BrandName } from '../Assets/StyledHome';
+
 const Footer = () => (
-  <footer className="d-flex flex-column align-items-center">
-    <span>SQUARE</span>
-    <span>
+  <StyledFooter className="d-flex flex-column align-items-center">
+    <BrandName>SQUARE</BrandName>
+    <span className="text-secondary my-4">
       Punta Nizuc - Cancún 335, Zona Hotelera, 77500 Cancún, Q.R. +998-825-32-28
     </span>
-    <span>
-      <span>facebook</span>
-      <span>twitter</span>
-      <span>instagram</span>
+    <span className="mb-4">
+      <TiSocialFacebook className="social facebook" />
+      <TiSocialTwitter className="social twitter" />
+      <TiSocialInstagram className="social instagram" />
     </span>
-    <span>Square 2021. All rights reserved</span>
-  </footer>
+    <span className="text-secondary">Square 2021. All rights reserved</span>
+  </StyledFooter>
 );
 
 export default Footer;
