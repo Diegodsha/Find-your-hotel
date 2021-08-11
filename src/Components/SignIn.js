@@ -1,7 +1,5 @@
-/* eslint-disable no-console */
-/* eslint-disable no-unused-vars */
 import { useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { Link, useHistory } from 'react-router-dom';
 import axios from 'axios';
 import { BASE_URL, hotelsEndpoint } from '../API/EndPoints';
@@ -37,11 +35,8 @@ const SignIn = () => {
           );
           dispatch(signInUserAction(user));
           history.push('/hotels');
-          console.log('Sign in successful', res.data);
         }
-      })
-      .catch((err) => console.log('Sign in error', err));
-    console.log(userName);
+      });
   };
 
   return (

@@ -1,12 +1,9 @@
-/* eslint-disable no-unused-vars */
-/* eslint-disable arrow-body-style */
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { BsChevronDown } from 'react-icons/bs';
 import Footer from './Footer';
-// import { setLogoutAction } from '../Actions';
 import { BASE_URL, hotelsEndpoint } from '../API/EndPoints';
 import {
   BrandName,
@@ -21,7 +18,6 @@ import Review from './Review';
 
 const Home = () => {
   const [Reviews, setReviews] = useState([]);
-  // const dispatch = useDispatch();
   const user = useSelector((state) => state.user);
   const getReviews = () => {
     axios
