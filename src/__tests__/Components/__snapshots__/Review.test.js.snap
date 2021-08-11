@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Review Component Renders correctly component 1`] = `
+<div
+  className="sc-bdnxRM dyiXzt card text-center col-12 col-md-5 col-lg-3 mb-4 justify-content-center"
+>
+  <div
+    className="card-body m-0"
+  >
+    <p
+      className="card-text"
+    >
+      review
+    </p>
+    <p
+      className="card-text"
+    >
+      body test
+    </p>
+    <p
+      className="card-text text-secondary"
+    >
+      Invalid Date
+    </p>
+  </div>
+</div>
+`;
