@@ -1,12 +1,12 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable arrow-body-style */
 import axios from 'axios';
-import React from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import React, { useEffect, useState } from 'react';
+import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { BsChevronDown } from 'react-icons/bs';
 import Footer from './Footer';
-import { setLogoutAction } from '../Actions';
+// import { setLogoutAction } from '../Actions';
 import { BASE_URL, hotelsEndpoint } from '../API/EndPoints';
 import {
   BrandName,
@@ -17,26 +17,25 @@ import {
   StyledSection4,
   StyledSection5,
 } from '../Assets/StyledHome';
+import Review from './Review';
 
 const Home = () => {
-  const dispatch = useDispatch();
+  const [Reviews, setReviews] = useState([]);
+  // const dispatch = useDispatch();
   const user = useSelector((state) => state.user);
-  const handleLogOut = () => {
-    console.log(`${BASE_URL}${hotelsEndpoint.logOutUser}`);
+  const getReviews = () => {
     axios
-      .delete(`${BASE_URL}${hotelsEndpoint.logOutUser}`, {
-        withCredentials: true,
-      })
-      .then(() => dispatch(setLogoutAction()))
-      .catch((err) => console.log('logout error:', err));
+      .get(`${BASE_URL}${hotelsEndpoint.hotels}/1/reviews`)
+      .then((res) => setReviews([...res.data]));
   };
+
+  useEffect(() => {
+    getReviews();
+  }, []);
+
   return (
     <>
-      {/* <button type="button" onClick={() => handleLogOut()}>
-        logout
-      </button>
-      <p className="text-danger">{user.loggedIn ? 'true' : 'false'}</p> */}
-      <StyledSection1 className="pe-1 pe-md-5 pt-4 d-flex position-relative text-white flex-column">
+      <StyledSection1 id="home" className="pe-1 pe-md-5 pt-4 d-flex position-relative text-white flex-column">
         <div className="d-flex justify-content-between">
           <BrandName>Square</BrandName>
 
@@ -54,8 +53,8 @@ const Home = () => {
               <Link to="/hotels" className="me-5 sign-in">
                 Hotels
               </Link>
-              <Link to="/favorites" className="sign-up">
-                Favorites
+              <Link to="/favourites" className="sign-up">
+                Favourites
               </Link>
             </span>
           )}
@@ -99,12 +98,14 @@ const Home = () => {
             vacations. Full information that will save your from unofficial
             sites and bring you the best online promotions
           </span>
-          <FindBtn
-            type="button"
-            className="align-self-center align-self-lg-start"
-          >
-            LEARN MORE
-          </FindBtn>
+          <Link to="/hotels">
+            <FindBtn
+              type="button"
+              className="align-self-center align-self-lg-start"
+            >
+              LEARN MORE
+            </FindBtn>
+          </Link>
         </div>
         <div className="col-12 col-lg-6 d-flex justify-content-center img-cont">
           <img
@@ -153,11 +154,17 @@ const Home = () => {
           <span className="text-secondary fw-bold my-4">
             PEOPLE ARE ALREADY ENJOYING THE SERVICE
           </span>
-          <h3 className="display-6 op-title">Look what these have to say</h3>
+          <h3 className="display-6 op-title mb-4">Look what these have to say</h3>
         </div>
-        <div className="col-12">reviews</div>
+        <div className="row g-0 d-flex justify-content-evenly justify-content-md-around" style={{ columnap: '5px' }}>
+          {Reviews.slice(0, 3).map((review) => (
+
+            <Review key={review.id} review={review} />
+
+          ))}
+        </div>
       </StyledSection4>
-      <StyledSection5 className="d-flex flex-column align-items-center">
+      <StyledSection5 className="d-flex flex-column align-items-center justify-content-center">
         <h3 className="my-4 text-white">Be allways comfortable</h3>
         <Link to="/hotels">
           <FindBtn type="button">FIND YOUR PLACE</FindBtn>
