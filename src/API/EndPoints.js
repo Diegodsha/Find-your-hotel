@@ -9,4 +9,4 @@ export const hotelsEndpoint = {
   loggedStatus: '/logged_in',
 };
 
-export const BASE_URL = 'http://localhost:3001';
+export const BASE_URL = 'https://square-api-rr.herokuapp.com';
