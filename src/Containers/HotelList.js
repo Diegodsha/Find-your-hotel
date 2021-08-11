@@ -1,26 +1,26 @@
 import PropTypes from 'prop-types';
+import StyledList from '../Assets/StyledList';
 import HotelCard from '../Components/HotelCard';
 import Nav from '../Components/Nav';
 
 const HotelList = ({ hotels }) => (
-  <div
-    className="row g-0"
-    style={{
-      marginTop: '4rem',
-      rowGap: '20px',
-      columnGap: '20px',
-      justifyContent: 'space-evenly',
-    }}
-  >
+  <StyledList style={{ paddingTop: '5rem' }} className="row g-0">
     <Nav />
     {hotels.map((hotel) => (
       <HotelCard key={hotel.id} hotel={hotel} />
     ))}
-  </div>
+  </StyledList>
 );
 
 HotelList.propTypes = {
-  hotels: PropTypes.isRequired,
+  hotels: PropTypes.arrayOf(
+    PropTypes.shape({
+      attributes: PropTypes.shape({
+        name: PropTypes.string.isRequired,
+      }),
+      id: PropTypes.string.isRequired,
+    }),
+  ).isRequired,
 };
 
 export default HotelList;
