@@ -1,5 +1,8 @@
 export const hotelsEndpoint = {
   hotels: '/hotels',
+  reviews: '/reviews',
+  users: '/users',
+  favourites: '/favourites',
   signUpUser: '/users',
   signInUser: '/login',
   logOutUser: '/logout',
