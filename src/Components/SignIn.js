@@ -6,9 +6,10 @@ import { Link, useHistory } from 'react-router-dom';
 import axios from 'axios';
 import { BASE_URL, hotelsEndpoint } from '../API/EndPoints';
 import { signInUserAction } from '../Actions';
+import Nav from './Nav';
+import { FormContainer, StyledForm } from '../Assets/StyledSignFrom';
 
 const SignIn = () => {
-  //   const user = useSelector((state) => state.user);
   const dispatch = useDispatch();
   const history = useHistory();
   const [userName, setuserName] = useState('');
@@ -30,33 +31,31 @@ const SignIn = () => {
       .then((res) => {
         const { user } = res.data;
         if (res.data.signed_in === true) {
+          localStorage.setItem(
+            'user',
+            JSON.stringify({ ...res.data.user, loggedIn: true }),
+          );
           dispatch(signInUserAction(user));
-          history.push('/home');
+          history.push('/hotels');
           console.log('Sign in successful', res.data);
         }
       })
       .catch((err) => console.log('Sign in error', err));
+    console.log(userName);
   };
 
   return (
-    <div
+    <FormContainer
       className="d-flex justify-content-center align-items-center"
-      style={{
-        minHeight: '100vh',
-        background:
-          'linear-gradient(rgba(253, 253, 253, 0.84), rgba(253, 253, 253, 0.84)),url(https://dynamic-media-cdn.tripadvisor.com/media/photo-o/14/47/f2/ef/hyatt-zilara-cancun.jpg?w=1200&h=-1&s=1)',
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat',
-      }}
     >
-      <form className="d-flex flex-column " onSubmit={handleSubmit}>
-        <span className="mb-2 text-center display-5">Sign in</span>
-        <span className="mb-5">
+      <Nav />
+      <StyledForm className="d-flex flex-column m-4 align-items-center text-center" onSubmit={handleSubmit}>
+        <span className="mb-3 display-5 fw-normal">Sign in</span>
+        <span className="mb-5 ">
           Hello there! Sign in and start planning your next vacations
         </span>
         <input
-          className="mb-4"
+          className="mb-4 userName"
           type="text"
           name="name"
           value={userName}
@@ -64,15 +63,16 @@ const SignIn = () => {
           onChange={handleName}
           required
         />
-        <button className="mb-5" type="submit">
+        <button className="mb-5 sign-btn" type="submit">
           Sign in
         </button>
-        <span>
+        <span className="text-secondary">
           Don&apos;t have an account?
+          {' '}
           <Link to="/signup">Sign up</Link>
         </span>
-      </form>
-    </div>
+      </StyledForm>
+    </FormContainer>
   );
 };
 
