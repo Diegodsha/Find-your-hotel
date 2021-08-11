@@ -10,8 +10,7 @@ const { hotels, signInUser, signUpUser } = hotelsEndpoint;
 
 const getHotels = async () => {
   const res = await axios.get(`${BASE_URL}${hotels}`);
-  //   console.log(res.data);
-  return res.data;
+  return res.data.data;
 };
 
 export default getHotels;
