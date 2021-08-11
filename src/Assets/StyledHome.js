@@ -2,11 +2,14 @@
 import styled from 'styled-components';
 
 const BrandName = styled.span`
-  padding: 5px;
+  padding: 3px;
   border: 4px #c34e3c solid;
   border-radius: 5px;
   font-weight: bold;
   font-size: 25px;
+  &:hover {
+    box-shadow: 0px 0px 10px 3px #ec5200;
+  }
 `;
 
 const FindBtn = styled.button`
@@ -16,9 +19,9 @@ const FindBtn = styled.button`
   padding: 15px 40px;
   border: none;
   border-radius: 2rem;
-  transition: background-color 200ms ease-in;
+  transition: box-shadow 200ms ease-in;
   &:hover {
-    background-color: #c34e3c;
+    box-shadow: 3px 1px 10px 3px #ec5200;
   }
 `;
 
