@@ -35,7 +35,7 @@ const HotelCard = ({ hotel, removeFavorite }) => (
             $
             {' '}
             {hotel.attributes.price_nigth}
-            <span className="text-secondary ">per Nigth</span>
+            <span className="text-secondary ">per Night</span>
           </p>
           <Link to={`/hotels/details/${hotel.id}`}>
             <button className="details" type="button">
