@@ -1,4 +1,3 @@
-/* eslint-disable object-curly-newline */
 import styled from 'styled-components';
 
 const BrandName = styled.span`
