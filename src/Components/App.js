@@ -6,10 +6,10 @@ import { BASE_URL, hotelsEndpoint } from '../API/EndPoints';
 import { fetchHotels, setLogginAction, setLogoutAction } from '../Actions';
 import Hotels from './Hotels';
 import Home from './Home';
-import SignIn from './SignIn';
-import SignUp from './SignUp';
-import HotelDetails from './HotelDetails';
-import Favourites from './Favourites';
+import SignIn from '../Containers/SignIn';
+import SignUp from '../Containers/SignUp';
+import HotelDetails from '../Containers/HotelDetails';
+import Favourites from '../Containers/Favourites';
 
 function App() {
   const user = useSelector((state) => state.user);

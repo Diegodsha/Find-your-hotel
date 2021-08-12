@@ -91,7 +91,7 @@ const Home = () => {
           </h3>
           <span className="my-5 best text-secondary">
             You will have the best options to decide where to spend your
-            vacations. Full information that will save your from unofficial
+            vacations. Full information that will save you from unofficial
             sites and bring you the best online promotions
           </span>
           <Link to="/hotels">

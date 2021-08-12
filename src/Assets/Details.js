@@ -27,20 +27,10 @@ const Details = styled.div`
 
   .card-body {
     margin-bottom: 110px;
-    .arrow-down{
+    .arrow-down {
       font-size: 1.5rem;
     }
   }
-  /* .rating {
-    position: absolute;
-    bottom: 10px;
-  }
-
-  .price {
-    position: absolute;
-    bottom: 10px;
-    right: 0;
-  } */
 `;
 
 export default Details;

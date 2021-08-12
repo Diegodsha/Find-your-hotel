@@ -18,18 +18,13 @@ const StyledCard = styled.div`
     }
   }
   .fav-heart {
-    /* color: #fff; */
     font-size: 1.5rem;
   }
 
   .card-details {
     background: rgba(255, 255, 255, 0.9);
-    /* position: absolute;
-    bottom: 0%; */
     border-radius: 15px;
     height: 30%;
-    /* width: 100%;
-    left: 0; */
   }
 
   .per-nigth {

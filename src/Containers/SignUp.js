@@ -1,11 +1,12 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { Link, useHistory } from 'react-router-dom';
 import axios from 'axios';
 import { BASE_URL, hotelsEndpoint } from '../API/EndPoints';
 import { signUpUserAction } from '../Actions';
-import Nav from './Nav';
+import Nav from '../Components/Nav';
 import { FormContainer, StyledForm } from '../Assets/StyledSignFrom';
+import localUser from '../Helpers';
 
 const SignUp = () => {
   const dispatch = useDispatch();
@@ -41,6 +42,10 @@ const SignUp = () => {
         }
       });
   };
+
+  useEffect(() => {
+    if (localUser) history.push('/hotels');
+  }, []);
 
   return (
     <FormContainer

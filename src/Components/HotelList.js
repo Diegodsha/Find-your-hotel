@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import StyledList from '../Assets/StyledList';
-import HotelCard from '../Components/HotelCard';
-import Nav from '../Components/Nav';
+import HotelCard from './HotelCard';
+import Nav from './Nav';
 
 const HotelList = ({ hotels }) => (
   <StyledList style={{ paddingTop: '5rem' }} className="row g-0">

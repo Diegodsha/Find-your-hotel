@@ -7,9 +7,10 @@ import { IoIosArrowBack } from 'react-icons/io';
 import { BsChevronDown } from 'react-icons/bs';
 import { BASE_URL, hotelsEndpoint } from '../API/EndPoints';
 import Details from '../Assets/Details';
-import Review from './Review';
-import ReviewForm from './ReviewForm';
+import Review from '../Components/Review';
+import ReviewForm from '../Components/ReviewForm';
 import StyledList from '../Assets/StyledList';
+import localUser from '../Helpers';
 
 const HotelDetails = ({ match }) => {
   const [Favourites, setFavourites] = useState([]);
@@ -17,9 +18,7 @@ const HotelDetails = ({ match }) => {
   const [Reviews, setReviews] = useState([]);
   const { id: hotelId } = match.params;
   const user = useSelector((state) => state.user);
-  const localUser = localStorage.getItem('user')
-    ? JSON.parse(localStorage.getItem('user'))
-    : false;
+
   const history = useHistory();
   const getFavourites = () => {
     axios
@@ -111,7 +110,7 @@ const HotelDetails = ({ match }) => {
             {Hotel.avg_score}
           </p>
           <p className="card-text price">
-            per Nigth $
+            per Night $
             {Hotel.price_nigth}
           </p>
         </div>

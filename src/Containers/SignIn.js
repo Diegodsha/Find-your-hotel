@@ -1,11 +1,12 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { Link, useHistory } from 'react-router-dom';
 import axios from 'axios';
 import { BASE_URL, hotelsEndpoint } from '../API/EndPoints';
 import { signInUserAction } from '../Actions';
-import Nav from './Nav';
+import Nav from '../Components/Nav';
 import { FormContainer, StyledForm } from '../Assets/StyledSignFrom';
+import localUser from '../Helpers';
 
 const SignIn = () => {
   const dispatch = useDispatch();
@@ -38,6 +39,10 @@ const SignIn = () => {
         }
       });
   };
+
+  useEffect(() => {
+    if (localUser) history.push('/hotels');
+  }, []);
 
   return (
     <FormContainer
