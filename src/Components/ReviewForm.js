@@ -19,8 +19,9 @@ const ReviewForm = ({ addReview }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     addReview(Review);
-    const form = document.getElementById('reviewForm');
-    form.reset();
+    setReview({
+      ...Review, reviewTitle: '', reviewBody: '', reviewScore: 0,
+    });
   };
 
   return (
