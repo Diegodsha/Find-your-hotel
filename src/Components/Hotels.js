@@ -1,5 +1,5 @@
 import { useSelector } from 'react-redux';
-import HotelList from '../Containers/HotelList';
+import HotelList from './HotelList';
 
 const Hotels = () => {
   const hotels = useSelector((state) => state.hotels);

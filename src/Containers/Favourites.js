@@ -6,7 +6,7 @@ import { Link, useHistory } from 'react-router-dom';
 import { BASE_URL, hotelsEndpoint } from '../API/EndPoints';
 import StyledList from '../Assets/StyledList';
 import { FormContainer } from '../Assets/StyledSignFrom';
-import HotelCard from './HotelCard';
+import HotelCard from '../Components/HotelCard';
 
 const Favourites = () => {
   const [Favourites, setFavourites] = useState([]);
