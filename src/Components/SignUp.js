@@ -34,7 +34,7 @@ const SignUp = () => {
       )
       .then((res) => {
         const { user } = res.data;
-        if (res.data.status === 'created') {
+        if (res.statusText === 'Created') {
           localStorage.setItem('user', JSON.stringify({ ...res.data.user, loggedIn: true }));
           dispatch(signUpUserAction(user));
           history.push('/hotels');
