@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import axios from 'axios';
 import { BASE_URL, hotelsEndpoint } from '../API/EndPoints';
 import { signUpUserAction } from '../Actions';
@@ -9,6 +9,7 @@ import { FormContainer, StyledForm } from '../Assets/StyledSignFrom';
 
 const SignUp = () => {
   const dispatch = useDispatch();
+  const history = useHistory();
   const [userInfo, setUserInfo] = useState({ userName: '', userEmail: '' });
 
   const handleUserInfo = (e) => {
@@ -36,6 +37,7 @@ const SignUp = () => {
         if (res.data.status === 'created') {
           localStorage.setItem('user', JSON.stringify({ ...res.data.user, loggedIn: true }));
           dispatch(signUpUserAction(user));
+          history.push('/hotels');
         }
       });
   };
