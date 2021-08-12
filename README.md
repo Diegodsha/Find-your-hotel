@@ -52,7 +52,7 @@
     for the back-end with Ruby on Rails allowing the user to use our authentication system
     in order to bring a better experience and allowing him/her to save hotels
     into a favorites lists to narrow the hotel search and select the best hotel that suits
-    the occasion.
+    the occasion. LEAVE A REVIEW TO AFFECT HOTELS RATING!
 
     Thank you for using Square app, the best application for vacations!
 
@@ -60,6 +60,11 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/f9097c04-4cfd-488b-8c67-0fd588580f41/deploy-status)](https://app.netlify.com/sites/square-app/deploys)
 
 Visit [Square](https://square-app.netlify.app/)
+
+- Demo users
+  - name: Diego
+  - name: Spidy González
+  - LEAVE A REVIEW TO AFFECT HOTELS RATING!
 
 ## Prerequisites
 
