@@ -72,9 +72,7 @@ Visit [Square](https://square-app.netlify.app/)
   - Web Browser
   - Code Editor 
   - Node Package Manager (NPM)
-  - Clone the [Square-api](https://github.com/Diegodsha/hotel-api)
-    - Or use the deployed version  [Square-api-live](https://square-api-rr.herokuapp.com/hotels)
-
+  - Clone the [Square-api](https://github.com/Diegodsha/hotel-api) repo
 ## Getting Started
 
 - Open your terminal 
@@ -86,14 +84,16 @@ Visit [Square](https://square-app.netlify.app/)
 
 ### Usage
 
+- After cloning the [Square-api](https://github.com/Diegodsha/hotel-api) repo, modify de BASE_URL and change the path to the local server of your choose (e.g let's say you want to use the api in port 3001 [rails s -p 3001] BASE_URL = http://localhost:3001) located at src/API/EndPoint.js
+
 - From within the project directory run `npm start` to start a local server in your web browser.
 - Available Paths:
- - Visit `http://localhost:3000/` for Home view
- - Visit `http://localhost:3000/hotels` for hotels view
- - Visit `http://localhost:3000//hotels/details/:id` for hotel details view
- - Visit `http://localhost:3000/signup` for sign up form view
- - Visit `http://localhost:3000/signin` for sign in form view
- - Visit `http://localhost:3000/favourites` for favourite hotels view
+  - Visit `http://localhost:3000/` for Home view
+  - Visit `http://localhost:3000/hotels` for hotels view
+  - Visit `http://localhost:3000/hotels/details/:id` for hotel details view
+  - Visit `http://localhost:3000/signup` for sign up form view
+  - Visit `http://localhost:3000/signin` for sign in form view
+  - Visit `http://localhost:3000/favourites` for favourite hotels view
 
 
 ### Testing (React-JEST)
@@ -121,8 +121,8 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-Microverse
-Design inspiration from [Alexey_Savitskiy](https://www.behance.net/gallery/37706679/Circle-(Landing-page-Dashboard-Mobile-App))
+- Microverse
+- Design inspiration from [Alexey_Savitskiy](https://www.behance.net/gallery/37706679/Circle-(Landing-page-Dashboard-Mobile-App))
 
 
 ## License
