@@ -89,7 +89,7 @@ const Nav = () => {
 
               <li>
                 <button className="nav-link active mx-3 mb-3 mb-lg-0 fw-bold logout" type="button" onClick={() => handleLogOut()}>
-                  logout
+                  Logout
                 </button>
               </li>
             </ul>
