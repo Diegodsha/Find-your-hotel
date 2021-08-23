@@ -2,7 +2,7 @@
 
 exports[`Footer Component Renders correctly component 1`] = `
 <footer
-  className="sc-bdnxRM czZLQH d-flex flex-column align-items-center"
+  className="sc-bdnxRM gXfQqz d-flex flex-column align-items-center"
 >
   <a
     className="text-dark text-decoration-none"
