@@ -1,0 +1,103 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ReviewForm Component Renders correctly component 1`] = `
+<div>
+  <button
+    className=" w-100 p-3 text-white fw-bold"
+    data-bs-target="#exampleModal"
+    data-bs-toggle="modal"
+    style={
+      Object {
+        "backgroundColor": "#1eac1e",
+        "border": "none",
+      }
+    }
+    type="button"
+  >
+    Add a review
+  </button>
+  <div
+    aria-hidden="true"
+    aria-labelledby="exampleModalLabel"
+    className="modal fade"
+    id="exampleModal"
+    tabIndex="-1"
+  >
+    <div
+      className="modal-dialog "
+    >
+      <div
+        className="modal-content p-4"
+      >
+        <div
+          className="modal-header"
+        >
+          <h5
+            className="modal-title text-center"
+            id="exampleModalLabel"
+          >
+            Thanks for your time, your opinion is very important for us!
+          </h5>
+        </div>
+        <div
+          className="modal-body "
+        >
+          <form
+            className="sc-gtsrHT gUeXta d-flex flex-column align-items-center"
+            id="reviewForm"
+            onSubmit={[Function]}
+          >
+            <input
+              className="my-3 title userName"
+              id="reviewTitle"
+              name="reviewTitle"
+              onChange={[Function]}
+              placeholder="Title"
+              type="text"
+              value=""
+            />
+            <textarea
+              className="my-3 body userName"
+              id="reviewBody"
+              maxLength="240"
+              minLength="4"
+              name="reviewBody"
+              onChange={[Function]}
+              placeholder="Tell us what you think..."
+              value=""
+            />
+            <input
+              className="my-3 score userName"
+              id="reviewScore"
+              max="5"
+              min="1"
+              name="reviewScore"
+              onChange={[Function]}
+              placeholder="score"
+              type="number"
+              value={0}
+            />
+            <button
+              className="btn btn-primary sign-btn"
+              type="submit"
+            >
+              Add review
+            </button>
+          </form>
+        </div>
+        <div
+          className="modal-footer d-flex justify-content-center"
+        >
+          <button
+            className="btn btn-secondary rounded-pill"
+            data-bs-dismiss="modal"
+            type="button"
+          >
+            Close
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
